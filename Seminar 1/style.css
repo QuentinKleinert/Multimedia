@@ -67,6 +67,13 @@ div {
     /*display: none;*/
     /*display: flex;*/
     /*display: grid;*/
+
+    /*10*/
+    box-sizing: border-box;
+    padding: 10px 10px 20px 10px;
+    margin: auto;
+    height: 300px;
+    width: auto;
 }
 
 h1 {
