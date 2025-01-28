@@ -18,3 +18,13 @@
 h1, h2 {
     color: red;
 }
+
+/*6.1*/
+.paragraf {
+    color: green;
+}
+
+/*6.3*/
+#oneliner {
+    color: gold;
+}
