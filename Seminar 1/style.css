@@ -16,6 +16,7 @@
 
 h1, h2 {
     color: red;
+    border: 1px solid black;
 }
 
 /*6.1*/
@@ -31,6 +32,9 @@ h1, h2 {
     /*font-size: 10px;*/
     /*8.2*/
     font-size: 1em;
+
+    border: 1px solid black;
+    background-color: rgb(213, 215, 158);
 }
 
 #paragraf2 {
@@ -40,6 +44,8 @@ h1, h2 {
     /*font-size: 15px;*/
     /*8.2*/
     font-size: 2em;
+    border: 1px solid black;
+    background-color: rgb(47, 168, 116);
 }
 
 #paragraf3 {
@@ -49,4 +55,24 @@ h1, h2 {
     /*font-size: 20px;*/
     /*8.3*/
     font-size: 1.3rem;
+    border: 1px solid black;
+    background-color: rgb(205, 187, 201);
+}
+
+div {
+    border: 3px solid black;
+    /*9.3*/
+    /*display: block;*/
+    /*display: inline-block;*/
+    /*display: none;*/
+    /*display: flex;*/
+    /*display: grid;*/
+}
+
+h1 {
+    background-color: blue;
+}
+
+h2 {
+    background-color: aqua;
 }
