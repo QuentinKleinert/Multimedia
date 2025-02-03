@@ -37,6 +37,7 @@ img, video {
     height: auto;
     display: block;
     margin: auto;
+    -ms-interpolation-mode: bicubic;
 }
 
 @media screen and (max-width: 1250px) {
