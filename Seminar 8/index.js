@@ -1,91 +1,90 @@
-//Aufgabe 2
-const images = document.querySelectorAll("img");
-const dropzones = document.querySelectorAll(".dropzone");
 
-images.forEach((img) => {
-    img.addEventListener("dragstart", (e) => {
-        e.dataTransfer.setData("text/plain", e.target.id);
-    });
-});
-
-dropzones.forEach((zone) => {
-    zone.addEventListener("dragover", (e) => {
-        e.preventDefault();
-        zone.classList.add("over");
-    });
-
-    zone.addEventListener("dragleave", () => {
-        zone.classList.remove("over");
-    });
-
-    zone.addEventListener("drop", (e) => {
-        e.preventDefault();
-        const imgId = e.dataTransfer.getData("text/plain");
-        const img = document.getElementById(imgId);
-        
-        if (zone !== img.parentElement) {
-            zone.appendChild(img);
+//txt Datei laden
+function loadText() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("output").innerHTML = this.responseText;
         }
-        
-        zone.classList.remove("over");
-    });
-});
-
-//Aufgabe 4
-let taskId = 0;
-
-function allowDrop(event) {
-    event.preventDefault();
+    };
+    xhttp.open("GET", "ajax_info.txt", true);
+    xhttp.send();
 }
 
-function drag(event) {
-    event.dataTransfer.setData("text", event.target.id);
-}
-
-function drop(event) {
-    event.preventDefault();
-    const taskId = event.dataTransfer.getData("text");
-    const task = document.getElementById(taskId);
-    const dropZone = event.currentTarget;
-
-    dropZone.appendChild(task);
-
-    if (dropZone.id === "done") {
-        task.classList.add("done");
-    } else {
-        task.classList.remove("done");
-    }
-
-    if (dropZone.id === "trash") {
-        const removeBtn = document.createElement("button");
-        removeBtn.innerText = "Löschen";
-        removeBtn.onclick = () => task.remove();
-        
-        if (!task.querySelector('button')) {
-            task.appendChild(removeBtn);
+// 2. JSON-Datei laden
+function loadJSON() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var data = JSON.parse(this.responseText);
+            var output = "<h3>JSON Daten:</h3>";
+            output += "<p>Name: " + data.name + "</p>";
+            output += "<p>Alter: " + data.age + "</p>";
+            output += "<p>Beruf: " + data.job + "</p>";
+            document.getElementById("output").innerHTML = output;
         }
-    } else {
-        const removeBtn = task.querySelector('button');
-        if (removeBtn) removeBtn.remove();
-    }
+    };
+    xhttp.open("GET", "data.json", true);
+    xhttp.send();
 }
 
-function addTask() {
-    const taskText = document.getElementById("taskText").value;
-    const taskColor = document.getElementById("taskColor").value;
-
-    if (!taskText) return;
-
-    const task = document.createElement("div");
-    task.className = "task";
-    task.id = "task-" + taskId++;
-    task.draggable = true;
-    task.ondragstart = drag;
-    task.style.backgroundColor = taskColor;
-
-    task.innerHTML = `<span>${taskText}</span>`;
-
-    document.getElementById("todo").appendChild(task);
-
-    document.getElementById("taskText").value = "";
+// 3. XML-Datei laden
+function loadXML() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var xmlDoc = this.responseXML;
+            var items = xmlDoc.getElementsByTagName("person")[0];
+            var name = items.getElementsByTagName("name")[0].childNodes[0].nodeValue;
+            var age = items.getElementsByTagName("age")[0].childNodes[0].nodeValue;
+            var job = items.getElementsByTagName("job")[0].childNodes[0].nodeValue;
+            
+            var output = "<h3>XML Daten:</h3>";
+            output += "<p>Name: " + name + "</p>";
+            output += "<p>Alter: " + age + "</p>";
+            output += "<p>Beruf: " + job + "</p>";
+            document.getElementById("output").innerHTML = output;
+        }
+    };
+    xhttp.open("GET", "data.xml", true);
+    xhttp.send();
 }
+
+// 4. XML-Datei mit DOM-Manipulation
+function manipulateXML() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var xmlDoc = this.responseXML;
+            var people = xmlDoc.getElementsByTagName("person");
+            
+            // Alten Inhalt löschen
+            document.getElementById("output").innerHTML = "<h3>XML Daten (DOM-Manipulation):</h3>";
+
+            // Für jede Person ein neues DOM-Element erstellen
+            for (var i = 0; i < people.length; i++) {
+                var name = people[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
+                var age = people[i].getElementsByTagName("age")[0].childNodes[0].nodeValue;
+                var job = people[i].getElementsByTagName("job")[0].childNodes[0].nodeValue;
+
+                // Dynamisch neue HTML-Elemente erstellen
+                var personDiv = document.createElement("div");
+                personDiv.style.border = "1px solid #4CAF50";
+                personDiv.style.margin = "10px 0";
+                personDiv.style.padding = "10px";
+                personDiv.style.backgroundColor = "#f9f9f9";
+                
+                personDiv.innerHTML = 
+                    "<p><strong>Name:</strong> " + name + "</p>" +
+                    "<p><strong>Alter:</strong> " + age + "</p>" +
+                    "<p><strong>Beruf:</strong> " + job + "</p>";
+
+                // Die neuen Elemente in das Output-Div einfügen
+                document.getElementById("output").appendChild(personDiv);
+            }
+        }
+    };
+    xhttp.open("GET", "manipulation.xml", true);
+    xhttp.send();
+}
+

@@ -1,19 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Übung 7</title>
+    <title>Seminar 7</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h2>Aufgabe 1 + 2</h2>
-    <button onclick="startWorker()">Berechnung starten</button>
-    <p>Timer: <output id="Timer"></output></p>
-    <p>Output: <output id="Output"></output></p>
-    <script src="index.js"></script>
+    <h2>Aufgabe 2</h2>
+    <div class="container">
+      <div id="original" class="dropzone">
+        <img id="image1" src="https://placehold.co/600x400" draggable="true" />
+        <img id="image2" src="https://placehold.co/600x400" draggable="true" />
+      </div>
+      <div id="dropzone1" class="dropzone"></div>
+      <div id="dropzone2" class="dropzone"></div>
+    </div>
+    <h2>Aufgabe 4</h2>
+    <div class="add-task">
+      <input type="text" id="taskText" placeholder="Aufgabe eingeben" />
+      <select id="taskColor">
+        <option value="#ffeb3b">Gelb</option>
+        <option value="#8bc34a">Grün</option>
+        <option value="#03a9f4">Blau</option>
+        <option value="#e91e63">Pink</option>
+      </select>
+      <button onclick="addTask()">Aufgabe hinzufügen</button>
+    </div>
 
-    <h2>Aufgabe 3</h2>
-    <button onclick="startSelect()">Selection Sort starten</button>
-    <p>Sortierzeit: <output id="SortOutput"></output></p>
+    <div class="board">
+      <div
+        id="todo"
+        class="column"
+        ondragover="allowDrop(event)"
+        ondrop="drop(event)"
+      >
+        <h2>ToDo</h2>
+      </div>
+      <div
+        id="wip"
+        class="column"
+        ondragover="allowDrop(event)"
+        ondrop="drop(event)"
+      >
+        <h2>WIP</h2>
+      </div>
+      <div
+        id="done"
+        class="column"
+        ondragover="allowDrop(event)"
+        ondrop="drop(event)"
+      >
+        <h2>Done</h2>
+      </div>
+      <div
+        id="trash"
+        class="column"
+        ondragover="allowDrop(event)"
+        ondrop="drop(event)"
+      >
+        <h2>Trash</h2>
+      </div>
+    </div>
+    <script src="index.js"></script>
   </body>
 </html>
