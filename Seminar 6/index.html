@@ -4,16 +4,104 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Übung 7</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      #wrap {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        margin: 0 auto -60px;
+      }
+      #push,
+      #footer {
+        height: 60px;
+      }
+      #footer {
+        background-color: #f5f5f5;
+      }
+      @media (max-width: 767px) {
+        #footer {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+      .container {
+        width: auto;
+        max-width: 680px;
+      }
+      .container .credit {
+        margin: 20px 0;
+      }
+    </style>
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
     <h2>Aufgabe 1 + 2</h2>
     <button onclick="startWorker()">Berechnung starten</button>
     <p>Timer: <output id="Timer"></output></p>
     <p>Output: <output id="Output"></output></p>
-    <script src="index.js"></script>
 
     <h2>Aufgabe 3</h2>
-    <button onclick="startSelect()">Selection Sort starten</button>
-    <p>Sortierzeit: <output id="SortOutput"></output></p>
+    <div class="container">
+      <div class="page-header"></div>
+      <p class="lead" style="text-align: center">
+        <button class="btn btn-large" onclick="javascript:nonWebWorker();">
+          Without Web Worker
+        </button>
+        <button
+          class="btn btn-success btn-large"
+          onclick="javascript:withWebWorker();"
+        >
+          With Web Worker
+        </button>
+      </p>
+
+      <div id="progressbar" class="progress progress-striped active hide">
+        <div class="bar" style="width: 100%"></div>
+      </div>
+
+      <div id="resultBox" class="well well-large hide">
+        <p class="muted">50K Array sorted in:</p>
+        <h1 id="timespent"></h1>
+      </div>
+    </div>
+    <div id="push"></div>
+
+    <h2>Aufgabe 4</h2>
+    <p>
+      If we list all the natural numbers below 10 that are multiples of 3 or 5,
+      we get 3, 5, 6 and 9. The sum of these multiples is 23. Enter the upper
+      and lower bound below and the program will use a Web Worker to run a
+      background thread to calcular the number of multiples of 3 or 5 between
+      the two numbers, as well as the sum of these numbers.
+    </p>
+    <p>
+      Web Workers allow for work to be done while leaving the user
+      experience/interface uninterrupted. To illustrate this point, this example
+      includes a loading icon that will display while the calculations are being
+      done in the background.
+    </p>
+
+    <label for="lower"
+      >Lower Bound
+      <input id="lower" type="text" value="0" maxlength="8" /></label
+    ><br />
+    <label for="upper"
+      >Upper Bound
+      <input id="upper" type="text" value="0" maxlength="8" /></label
+    ><br />
+    <button id="calculate">Calculate</button>
+
+    <p id="loading" style="display: none">
+      <i class="fa fa-spinner fa-pulse"></i>
+    </p>
+    <p id="result"></p>
+    <script src="index.js"></script>
   </body>
 </html>

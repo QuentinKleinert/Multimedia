@@ -1,37 +1,34 @@
-onmessage = function (e) {
+onmessage = function(e) {
   if (e.data === "start") {
-    const array = createArray(50000); // 50K Elemente zum Sortieren
+    var a = [];
 
-    const startTime = performance.now();
-    selectionSort(array);
-    const endTime = performance.now();
+    for (var i = 50000; i >= 0; i--) {
+      a.push(i);
+    }
 
-    postMessage(endTime - startTime); // Sende die benötigte Zeit zurück
+    function selectionSort(a) {
+      var n = a.length;
+      for (var i = 0; i < n - 1; i++) {
+        var minIndex = i;
+        for (var j = i + 1; j < n; j++) {
+          if (a[j] < a[minIndex]) {
+            minIndex = j;
+          }
+        }
+        if (minIndex !== i) {
+          var temp = a[i];
+          a[i] = a[minIndex];
+          a[minIndex] = temp;
+        }
+      }
+    }
+
+    var start = new Date().getTime();
+    selectionSort(a);
+    var end = new Date().getTime();
+    var time = end - start;
+    postMessage(time);
   }
 };
 
-// Hilfsfunktion zum Erstellen eines Arrays
-function createArray(size) {
-  const array = [];
-  for (let i = size; i >= 0; i--) {
-    array.push(i);
-  }
-  return array;
-}
-
-// Selection Sort Algorithmus
-function selectionSort(array) {
-  const n = array.length;
-  for (let i = 0; i < n - 1; i++) {
-    let minIndex = i;
-    for (let j = i + 1; j < n; j++) {
-      if (array[j] < array[minIndex]) {
-        minIndex = j;
-      }
-    }
-    if (minIndex !== i) {
-      [array[i], array[minIndex]] = [array[minIndex], array[i]]; // Elemente tauschen
-    }
-  }
-}
 
