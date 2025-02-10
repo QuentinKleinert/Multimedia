@@ -1,0 +1,153 @@
+h1, h2 {
+    color: red;
+    border: 1px solid black;
+    clear: both;
+}
+
+h1 {
+    background-color: blue;
+    
+    /*2.2*/
+    /* clear: both;
+    margin-top: 600px; */
+}
+
+h2 {
+    background-color: aqua;
+}
+
+.paragraf {
+    color: green;
+}
+
+#paragraf1 {
+    color: rgba(236, 153, 222, 0.9);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    border: 1px solid black;
+    background-color: rgb(213, 215, 158);
+}
+
+#paragraf2 {
+    color: rgba(51, 60, 91, 0.6);
+    font-family:'Times New Roman', Times, serif;
+    font-size: 2em;
+    border: 1px solid black;
+    background-color: rgb(47, 168, 116);
+}
+
+#paragraf3 {
+    color: rgba(150, 81, 3, 0.3);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    border: 1px solid black;
+    background-color: rgb(205, 187, 201);
+}
+
+/*2.2*/
+/* #paragraf4 {
+    font-size: 50px;
+    border: 1px solid black;
+} */
+
+img {
+    height: auto;
+}
+
+.text-picture-container {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+.B, .C, img {
+    width: 33.33%; 
+    float: left; 
+    box-sizing: border-box; 
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.B, .C {
+    color: rgba(150, 81, 3, 0.3);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    border: 1px solid black;
+    background-color: rgb(205, 187, 201);
+
+}
+
+.flex-container {
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-item {
+    border: 1px solid black;
+    font-size: 20px;
+    flex: 1;
+}
+
+.grid-container {
+    margin-top: 10px;
+    display: grid;
+    border: 2px solid black;
+    gap: 10px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid-item {
+    border: 1px solid black;
+    font-size: 20px;
+    margin: 0;
+}
+
+.grid-item:nth-child(3), .grid-item:nth-child(4) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.grid-container2 {
+    margin-top: 10px;
+    display: grid;
+    border: 2px solid black;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    width: auto;
+    height: 400px;
+}
+
+.grid-item2 {
+    border: 1px solid black;
+    font-size: 20px;
+    margin: 0;
+}
+
+#item1 {
+    grid-column: 1;
+    grid-row: 1/3;
+}
+
+#item2 {
+    grid-column: 2/4;
+    grid-row: 1;
+}
+
+#item3 {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+#item4 {
+    grid-column: 1/4;
+    grid-row: 3;
+}
+
+
+
+
+
+

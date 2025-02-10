@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Mobile-First vs. Desktop-First</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css">
+
+    <!-- Ergänzende Stylesheet --->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Syntax highlighting -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+<div class="reveal">
+    <div id="menubartop" class="menubar top ready">
+        <ul class="menu">
+            <li><a href="#/toc" data-sm="toc">Gliederung</a></li>
+            <li><a href="#/desktop-first" data-sm="desktop-first">Desktop-First</a></li>
+            <li><a href="#/mobile-first" data-sm="mobile-first">Mobile-First</a></li>
+            <li><a href="#/transfer" data-sm="transfer">Vergleich</a></li>
+            <li><a href="#/sources" data-sm="sources">Quellen</a></li>
+        </ul>
+    </div>
+    <div class="slides">
+        <section>
+            <h1>Mobile-First vs.<br>Desktop-First</h1>
+            <p>Robert Hobelsberger, Felix Kirchner, Quentin Kleinert</p>
+        </section>
+
+        <section>
+            <section id="toc" data-name="toc">
+                <h2>Gliederung</h2>
+                <ol>
+                    <li>Desktop-First</li>
+                    <li>Mobile-First</li>
+                    <li>Vergleich & Trends</li>
+                </ol>
+            </section>
+        </section>
+
+        <section>
+            <section id="desktop-first" data-name="desktop-first">
+                <h1>Desktop-First</h1>
+            </section>
+            <section>
+                <h2>Beschreibung</h2>
+                <img src="assets/images/desktop-first/scheme-design.webp" style="width: 50%"/>
+                <ul>
+                    <li class="fragment">Desktop- oder Laptop-Erlebnis steht im Vordergrund</li>
+                    <li class="fragment">Ausgehend davon Konzepte für kleinere Bildschirme ableiten</li>
+                    <li class="fragment">Responsive Retrofitting: nicht-responsive (Desktop-)Website wird im nachhinein
+                        mobiltauglich gemacht</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Beispiele</h2>
+                <video autoplay="true" loop="true" data-loop src="assets/website-videos/apple.webm"
+                       style="width: 75%"></video>
+            </section>
+            <section>
+                <h2>Beispiele</h2>
+                <video autoplay="true" loop="true" data-loop src="assets/website-videos/adobe.webm"
+                       style="width: 75%"></video>
+            </section>
+            <section>
+                <h2>Vorteile</h2>
+                <ul>
+                    <li class="fragment">Erweiterte Nutzererfahrung (UX) für den Desktop-Markt
+                    <ul>
+                        <li>Vollständiges Feature-Erlebnis</li>
+                        <li>Mehr Interaktionsmöglichkeiten</li>
+                    </ul>
+                    </li>
+                    <li class="fragment">Legacy-Nutzer</li>
+                    <li class="fragment">Visuelle Hierarchie</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Nachteile</h2>
+                <ul>
+                    <li class="fragment">Schlecht(er)es mobiles Erlebnis</li>
+                    <li class="fragment">Eingeschränkte Zukunftssicherheit</li>
+                    <li class="fragment">Höherer Entwicklungsaufwand
+                        <ul>
+                            <li>Nachträgliche Anpassung an mobile Geräte</li>
+                            <li>Umbau zu flexiblem, responsiven Design </li>
+                        </ul>
+                    </li>
+                    <li class="fragment">Unnötige Ressourcen und Datenverbrauch
+                        <ul>
+                            <li>Längeren Ladezeiten </li>
+                            <li>Höherer Datenverbrauch </li>
+                        </ul>
+                    </li>
+                    <li class="fragment">SEO / Mobile-First-Indexierung
+                        <ul>
+                            <li>Mobile Websites werden bevorzugt</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h2>Anwedungszwecke</h2>
+                <ul>
+                    <li class="fragment">Komplexe Webanwendungen
+                        <ul>
+                            <li>CAD-Software</li>
+                            <li>Finanzanwendungen</li>
+                            <li>Datenvisualisierung</li>
+                        </ul>
+                    </li>
+                    <li class="fragment">B2B-Websites
+                        <ul>
+                            <li>Websites für Unternehmenssoftware</li>
+                            <li>SaaS-Plattformen (CRM- und ERP-Systeme)</li>
+                            <li>Projektmanagement-Tools</li>
+                        </ul>
+                    </li>
+                    <li class="fragment">Forschungsintensive Plattformen
+                        <ul>
+                            <li>Websites mit Diagrammen, Graphen, Datenvisualisierung</li>
+                            <li>Marktanalyse-Tools</li>
+                            <li>wissenschaftliche Datensammlungen</li>
+                        </ul>
+                    </li>
+                    <li class="fragment">Portfolio Websites Plattformen</li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <section id="mobile-first" data-name="mobile-first">
+                <h1>Mobile-First</h1>
+            </section>
+            <section class="">
+                <h2>Was ist Mobile First?</h2>
+                <img alt="mobile first chart" src="assets/images/mobile-first/scheme-design.webp" style="width: 50%"/>
+                <ul>
+                    <li class="fragment">Definition: Fokus auf die Optimierung für mobile Geräte, dann sukzessive Anpassungen an größere Bildschirme.</li>
+                    <li class="fragment">Entwicklung startet beim kleinsten Layout (kleinster Viewport).</li>
+                    <li class="fragment">Im Zentrum: optimale Lösung für mobile Endgeräte.</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Warum Mobile First?</h2>
+                <table>
+                    <tr>
+                        <td style="vertical-align: middle;">
+                            <img src="assets/images/mobile-first/chart.webp" style="width: 100%">
+                        </td>
+                        <td style="vertical-align: middle;">
+                            <ul>
+                                <li class="fragment">
+                                    Mehr als 80% der Internetnutzer in Deutschland surfen mobil
+                                    (seit 2015).
+                                </li>
+                                <li class="fragment">Smartphones und Tablets dominieren das Nutzungsverhalten.</li>
+                                <li class="fragment">
+                                    Trends und Benutzergewohnheiten erfordern mobile Optimierung.
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+
+            </section>
+            <section>
+                <h2>Mobile First Prinzipien</h2>
+                <img src="assets/images/mobile-first/cover.webp" style="width: 60%">
+                <ul>
+                    <li class="fragment">Beschränkung auf das Wesentliche</li>
+                    <li class="fragment">Maximale Performance</li>
+                    <li class="fragment">Strukturierte Inhalte für schnellen Zugriff</li>
+                    <li class="fragment">Design auf kleine Displays anpassen</li>
+                    <li class="fragment">Reduktion von Code und unnötigen Funktionen</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Vorteile von Mobile First</h2>
+                <ul>
+                    <li class="fragment">Große Reichweite durch mobile Optimierung</li>
+                    <li class="fragment">Schnelle und effiziente Entwicklung</li>
+                    <li class="fragment">Benutzerfreundliches Layout</li>
+                    <li class="fragment">Schnellere Ladezeiten</li>
+                    <li class="fragment">
+                        Minimalistisches Design verbessert Lesbarkeit und reduziert
+                        Ablenkung
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h2>Nachteile des Mobile First Ansatzes</h2>
+                <ul>
+                    <li class="fragment">Komplizierte Anpassung für Desktops</li>
+                    <li class="fragment">Nicht für komplexe Webanwendungen geeignet</li>
+                    <li class="fragment">Einschränkungen bei Design und Platzverhältnissen</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Herausforderungen von Mobile First</h2>
+                <ul>
+                    <li class="fragment">
+                        Priorisierung von Inhalten und Verzicht auf weniger Wichtiges
+                    </li>
+                    <li class="fragment">Klare Navigation und klickbare Buttons erforderlich</li>
+                    <li class="fragment">Darstellung komplexer Daten (z. B. Tabellen)</li>
+                    <li class="fragment">Balance zwischen Informationsfülle und Funktionalität</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Mobile First und Kosteneffizienz</h2>
+                <ul>
+                    <li class="fragment"><strong>Argumente dafür:</strong>
+                        <ul>
+                            <li class="fragment">Reduzierte Entwicklungszeit</li>
+                            <li class="fragment">Wartungsfreundlichkeit durch Minimalismus</li>
+                        </ul>
+                    </li>
+                    <li class="fragment"><strong>Argumente dagegen:</strong>
+                        <ul>
+                            <li class="fragment">Kosten für Tools und Tests</li>
+                            <li class="fragment">Anpassungsaufwand für größere Bildschirme</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h2>Wann ist eine Webseite Mobile Friendly?</h2>
+                <ul>
+                    <li class="fragment">Touch-freundliche Bedienelemente: Große Buttons, keine kleinen Klickziele.</li>
+                    <li class="fragment">Lesbarkeit: Kontrastreiche und klare Typografie für kleine Bildschirme.</li>
+                    <li class="fragment">Einfachheit: Nutzer erwarten schnelle und intuitive Navigation.</li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+			<section id="transfer" data-name="transfer">
+				<h1>Vergleich und<br>aktuelle Trends</h1>
+			</section>
+			<section>
+				<h2>Flexibilität</h2>
+				<h4>Mobile-First</h4>
+				<table style="width: 85%;">
+					<tr>
+						<td style="width: 50%; vertical-align: middle; text-align: center;">
+							<img src="assets/images/vergleich/v1.png" style="width: 90%; display: block; margin: 0 auto;">
+						</td>
+						<td style="width: 50%; vertical-align: middle; padding: 20px;">
+							<ul>
+								<li class="fragment">Sehr anpassungsfähig, da das Design von Anfang an für kleinere Bildschirme optimiert ist.</li>
+								<li class="fragment">Inhalte und Funktionen werden schrittweise für größere Geräte erweitert.</li>
+								<li class="fragment">Zwingt zu klaren Priorisierungen und einer fokussierten Gestaltung.</li>
+								<li class="fragment">Besonders geeignet für Projekte mit breiter Zielgruppe oder dominanter mobiler Nutzung.</li>
+							</ul>
+						</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Flexibilität</h2>
+				<h4>Desktop-First</h4>
+				<table style="width: 80%;">
+					<tr>
+						<td style="width: 50%; vertical-align: middle; padding: 20px;">
+							<ul>
+								<li class="fragment">Beginnt mit komplexen Designs für größere Bildschirme.</li>
+								<li class="fragment">Erfordert oft mehr Aufwand bei Anpassungen für mobile Geräte.</li>
+								<li class="fragment">Bietet Flexibilität bei anspruchsvollen Features, z. B. Dashboards oder datenintensiven Anwendungen.</li>
+							</ul>
+						</td>
+						<td style="width: 50%; vertical-align: middle; text-align: center;">
+							<img src="assets/images/vergleich/v1.png" style="width: 90%; display: block; margin: 0 auto;">
+						</td>
+					</tr>
+				</table>
+			</section>
+
+			<section>
+				<h3>Benutzererfahrung (UX)</h3>
+				<h4>Mobile-First</h4>
+				<table style="width: 85%;">
+					<tr>
+						<td style="width: 50%; vertical-align: middle; text-align: center;">
+							<img src="assets/images/vergleich/v2.png" style="width: 90%; display: block; margin: 0 auto;">
+						</td>
+						<td style="width: 50%; vertical-align: middle; padding: 20px;">
+							<ul>
+								<li class="fragment">Reduzierte Bildschirmgröße führt zu klareren und fokussierten Designs.</li>
+								<li class="fragment">„Weniger ist mehr“: Priorisierung wichtiger Inhalte und Interaktionen.</li>
+								<li class="fragment">Schnellere Ladezeiten durch minimalistische Ansätze verbessern die Nutzerzufriedenheit.</li>
+								<li class="fragment">Herausforderung: Komplexe Inhalte wie Tabellen oder interaktive Elemente schwer umsetzbar.</li>
+							</ul>
+						</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h3>Benutzererfahrung (UX)</h3>
+				<h4>Desktop-First</h4>
+				<table style="width: 80%;">
+					<tr>
+						<td style="width: 50%; vertical-align: middle; padding: 20px;">
+							<ul>
+								<li class="fragment">Bietet ein reichhaltiges, interaktives Nutzererlebnis auf größeren Bildschirmen.</li>
+								<li class="fragment">Ermöglicht den Einsatz detaillierter Layouts und anspruchsvoller Grafiken.</li>
+								<li class="fragment">Gefahr von überladenen Designs auf mobilen Geräten bei unzureichender Optimierung.</li>
+							</ul>
+						</td>
+						<td style="width: 50%; vertical-align: middle; text-align: center;">
+							<img src="assets/images/vergleich/v2.png" style="width: 90%; display: block; margin: 0 auto;">
+						</td>
+					</tr>
+				</table>
+			</section>
+
+			<section>
+				<h3>Performance und SEO</h3>
+				<h4>Mobile-First</h4>
+				<table style="width: 90%;">
+					<tr>
+						<td style="width: 50%; vertical-align: middle; text-align: center;">
+							<img src="assets/images/vergleich/v3.jpg" style="width: 90%; display: block; margin: 0 auto;">
+						</td>
+						<td style="width: 50%; vertical-align: middle; padding: 20px;">
+							<ul>
+								<li class="fragment">Schnelle Ladezeiten und optimierte Inhalte sorgen für bessere SEO-Rankings.</li>
+								<li class="fragment">Google bevorzugt mobil optimierte Seiten seit Einführung des Mobile-First-Index (2018).</li>
+								<li class="fragment">Geringe Datenmengen fördern die Nutzung in Regionen mit langsamen Verbindungen.</li>
+							</ul>
+						</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h3>Performance und SEO</h3>
+				<h4>Desktop-First</h4>
+				<table style="width: 90%;">
+					<tr>
+						<td style="width: 50%; vertical-align: middle; padding: 20px;">
+							<ul>
+								<li class="fragment">Potenziell höhere Ladezeiten auf mobilen Geräten durch komplexere Inhalte.</li>
+								<li class="fragment">Kann sinnvoll sein für B2B-Bereich, wo Desktop-Nutzung überwiegt.</li>
+							</ul>
+						</td>
+						<td style="width: 50%; vertical-align: middle; text-align: center;">
+							<img src="assets/images/vergleich/v3.jpg" style="width: 90%; display: block; margin: 0 auto;">
+						</td>
+					</tr>
+				</table>
+			</section>
+
+			<section>
+				<h3>Wann ist welcher Ansatz sinnvoll?</h3>
+				<h4>Mobile-First</h4>
+				<table style="width: 85%;">
+					<tr>
+						<td style="width: 50%; vertical-align: middle; text-align: center;">
+							<img src="assets/images/vergleich/v4.png" style="width: 90%; display: block; margin: 0 auto;">
+						</td>
+						<td style="width: 50%; vertical-align: middle; padding: 20px;">
+							<ul>
+								<li class="fragment">Für Projekte mit dominant mobiler Nutzung (z. B. Social Media, E-Commerce).</li>
+								<li class="fragment">Gut geeignet für Startups oder neue Projekte mit Fokus auf schnelle Reichweite.</li>
+								<li class="fragment">Ideal, wenn Performance und SEO im Vordergrund stehen.</li>
+							</ul>
+						</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h3>Wann ist welcher Ansatz sinnvoll?</h3>
+				<h4>Desktop-First</h4>
+				<table style="width: 90%;">
+					<tr>
+						<td style="width: 50%; vertical-align: middle; padding: 20px;">
+							<ul>
+								<li class="fragment">Für datenintensive Anwendungen, Dashboards oder Plattformen mit komplexen Funktionen.</li>
+								<li class="fragment">Geeignet für B2B-Projekte mit primär Desktop-orientierter Zielgruppe.</li>
+								<li class="fragment">Bietet kreative Freiheit für komplexe Desktop-Layouts.</li>
+							</ul>
+						</td>
+						<td style="width: 50%; vertical-align: middle; text-align: center;">
+							<img src="assets/images/vergleich/v5.jpg" style="width: 90%; display: block; margin: 0 auto;">
+						</td>
+					</tr>
+				</table>
+			</section>
+
+			<section>
+				<h3>Aktuelle Trends</h3>
+				<h4>Progressive Web Apps (PWAs)</h4>
+				<table style="width: 80%; height: 100%;">
+					<tr>
+						<td style="width: 50%; vertical-align: middle; text-align: center;">
+							<img src="assets/images/vergleich/v6.jpg" style="width: 90%; display: block; margin: 0 auto;">
+						</td>
+						<td style="width: 50%; vertical-align: middle; padding: 20px;">
+							<ul>
+								<li class="fragment">Kombinieren Vorteile von Mobile- und Desktop-First-Ansätzen.</li>
+								<li class="fragment">Bieten native App-ähnliche Nutzererfahrung, unabhängig vom Gerät.</li>
+								<li class="fragment">Besonders performant und flexibel, da sie Inhalte an den Nutzerkontext anpassen.</li>
+							</ul>
+						</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h3>Aktuelle Trends</h3>
+				<h4>Adaptive Design</h4>
+				<table style="width: 90%; height: 100%;">
+					<tr>
+						<td style="width: 50%; vertical-align: middle; padding: 20px;">
+							<ul>
+								<li class="fragment">Hybride Lösung mit spezifischen Layouts für verschiedene Geräte.</li>
+								<li class="fragment">Mittelweg zwischen Mobile-First und Desktop-First.</li>
+								<li class="fragment">Kombiniert responsives Design mit gerätespezifischen Optimierungen.</li>
+							</ul>
+						</td>
+						<td style="width: 50%; vertical-align: middle; text-align: center;">
+							<img src="assets/images/vergleich/v7.webp" style="width: 90%; display: block; margin: 0 auto;">
+						</td>
+					</tr>
+				</table>
+			</section>
+        </section>
+        <section id="sources" data-name="sources">
+            <h2>Quellen</h2>
+            <ul style="font-size: smaller;">
+                <li><a href="https://webclan.de/webdesign/mobile-first-design-vs-desktop-first-design/">webclan.de</a></li>
+                <li><a href="https://www.halbstark.de/insights/mobile-first-vs-desktop-first---warum-wir-auf-desktop-first-setzen">halbstark.de</a></li>
+                <li><a href="https://www.hvdig.de/webagentur/mobile-first-vs-desktop-first">hvdig.de</a></li>
+                <li><a href="https://www.ionos.de/digitalguide/websites/webdesign/mobile-first-neuer-ansatz-im-webdesign/">ionos.de</a></li>
+                <li><a href="https://de.ryte.com/wiki/Mobile_First/">ryte.de</a></li>
+                <li><a href="https://de.statista.com/statistik/daten/studie/633698/umfrage/anteil-der-mobilen-internetnutzer-in-deutschland/">statista.com</a></li>
+                <li><a href="https://web.dev/responsive-web-design-basics/">web.dev</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design">developer.mozilla.org</a></li>
+                <li><a href="https://getbootstrap.com/">getbootstrap.com</a></li>
+                <li><a href="https://www.e-spincorp.com/mobile-first-vs-desktop-first/">e-spincorp.com</a></li>
+                <li><a href="https://www.infidigit.com/blog/mobile-first-indexing/">infidigit.com</a></li>
+                <li><a href="https://www.selbstaendig-im-netz.de/webdesign/mobile-first-muss-man-sich-in-zukunft-vom-desktop-verabschieden/">selbstaendig-im-netz.de</a></li>
+                <li><a href="https://www.xenonstack.com/insights/adaptive-design-vs-responsive-design">xenonstack.com</a></li>
+            </ul>
+        </section>
+    </div>
+    <footer class="slide-footer">
+        Desktop-First vs. Mobile-First - Robert Hobelsberger, Felix Kirchner, Quentin Kleinert - Mutlimediale
+        Webprogrammierung (C741)
+    </footer>
+</div>
+
+<script type="text/javascript" src="https://livejs.com/live.js"></script>
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script src="plugin/simplemenu/simplemenu.js"></script>
+<script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+        width: 1920,
+        height: 1080,
+        hash: true,
+        slideNumber: "c/t",
+        showSlideNumber: 'all',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes, Simplemenu]
+    });
+</script>
+</body>
+
+</html>

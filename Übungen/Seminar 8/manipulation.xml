@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+    <person>
+        <name>Leon Schneider</name>
+        <age>27</age>
+        <job>Data Scientist</job>
+    </person>
+    <person>
+        <name>Sophie Becker</name>
+        <age>30</age>
+        <job>UX Designerin</job>
+    </person>
+    <person>
+        <name>Tom Fischer</name>
+        <age>45</age>
+        <job>IT-Consultant</job>
+    </person>
+</data>

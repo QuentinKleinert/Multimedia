@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+div, header, footer {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto; 
+    border: 2px solid black;
+    margin: 10px 0;
+    gap: 10px;
+    padding: 10px;
+}
+
+header, footer {
+    height: auto;
+}
+
+main {
+    min-height: 80vh;
+}
+
+.box:nth-child(1) { grid-column: span 2; } 
+.box:nth-child(2) { grid-row: span 4; }
+.box:nth-child(3) { grid-row: span 4; }
+.box:nth-child(4) { grid-column: span 2; }
+
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    -ms-interpolation-mode: bicubic;
+}
+
+@media screen and (max-width: 1250px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .box:nth-child(1), .box:nth-child(4) {
+        grid-column: span 1;
+    }
+}
+
+@media all and (orientation: landscape) {
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 30em) and (orientation: landscape) {
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

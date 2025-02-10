@@ -1,0 +1,9 @@
+.slide-footer{
+        position: fixed;
+        bottom: 0;
+        width: 100vw;
+        opacity: 0.66;
+        padding: 0.5em;
+        text-align: center;
+        font-size: 0.5em;
+}
