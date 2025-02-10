@@ -1,0 +1,3 @@
+[submodule "Seminar 1/Vortrag/mmwp"]
+	path = Seminar 1/Vortrag/mmwp
+	url = git@github.com:flixcoo/mmwp.git
