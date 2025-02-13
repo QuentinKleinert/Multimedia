@@ -20,7 +20,7 @@ let currentSection = 'featured';
           <div class="col-md-4">
             <div class="card project-card bg-dark text-white p-3 text-center">
               <h5 class="card-title">Seminar ${i}</h5>
-              <a href="#" class="btn btn-outline-light">View</a>
+              <a href="../Übungen/Seminar ${i}/index.html" class="btn btn-outline-light" target="_blank">View</a>
             </div>
           </div>`;
       }
