@@ -1,0 +1,28 @@
+
+#navbar-logo {
+    border-radius: 100%;
+    height: 3rem;
+    width: auto;
+}
+
+/* Entfernt den Hover-Effekt für das Logo und den Namen */
+.navbar-brand {
+    pointer-events: none;
+    /* Deaktiviert jegliche Interaktion */
+    color: white !important;
+    /* Falls Bootstrap es überschreibt */
+    text-decoration: none;
+}
+
+/* Hebt die Links hervor, wenn man mit der Maus darüberfährt */
+.navbar-nav .nav-link {
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffcc00 !important;
+    /* Ändert die Farbe, hier ein Goldton */
+    text-decoration: underline;
+    /* Optional: Unterstreichen beim Hover */
+    font-weight: bold;
+}

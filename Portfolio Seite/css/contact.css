@@ -1,0 +1,23 @@
+.contact-section {
+    background-color: #1a1a1a;
+    /* Dunkler Hintergrund */
+    color: #ffffff;
+    /* Weißer Text */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.email-button {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    /* Leichtes Leuchten */
+}
+
+.email-button:hover {
+    background-color: #333333;
+}

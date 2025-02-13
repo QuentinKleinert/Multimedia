@@ -1,0 +1,55 @@
+.intro-section {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-img {
+    border-radius: 20px;
+    /* Abgerundete Ecken */
+    max-width: 100%;
+    height: auto;
+}
+
+.contact-btn {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.contact-btn:hover {
+    background-color: #333333;
+}
+
+.name {
+    color: #8B7500;
+    text-shadow: 0 0 8px #d4af37, 0 0 15px #ffd700, 0 0 25px #ffcc00;
+}
+
+@media (max-width: 768px) {
+    .intro-section {
+        height: auto;
+        padding: 50px 0;
+        /* Fügt oben und unten Abstand hinzu */
+        text-align: center;
+        /* Zentriert den Text */
+    }
+
+    .profile-img {
+        max-width: 80%;
+        /* Verkleinert das Bild für mobile Ansicht */
+        height: auto;
+    }
+
+    .contactme-button {
+        width: 100%;
+        /* Passt die Button-Breite an */
+        margin-top: 10px;
+        /* Fügt Abstand oberhalb des Buttons hinzu */
+    }
+}

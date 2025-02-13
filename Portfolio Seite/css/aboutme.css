@@ -1,0 +1,37 @@
+.about-text {
+    max-width: 600px;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    /* Dynamische Größe */
+    line-height: 1.6;
+    /* Bessere Lesbarkeit */
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    /* Vergrößert und flexibel */
+    font-weight: bold;
+}
+
+.highlight {
+    color: #8B7500;
+    text-shadow: 0 0 8px #d4af37, 0 0 15px #ffd700, 0 0 25px #ffcc00;
+}
+
+.profile-img {
+    border-radius: 10px;
+    max-width: 100%;
+    /* Sorgt dafür, dass das Bild nicht zu groß wird */
+    height: auto;
+}
+
+/* Für kleine Bildschirme */
+@media (max-width: 768px) {
+    .about-text {
+        font-size: clamp(0.9rem, 2vw, 1rem);
+    }
+
+    .profile-img {
+        width: 100%;
+        height: auto;
+    }
+}
