@@ -1,28 +1,32 @@
-document.getElementById('next-btn').addEventListener('click', function() {
-    toggleSection();
+let currentSection = 'featured';
+
+  document.getElementById('next-btn').addEventListener('click', function() {
+    switchSection();
   });
   document.getElementById('prev-btn').addEventListener('click', function() {
-    toggleSection();
+    switchSection();
   });
 
-  function toggleSection() {
+  function switchSection() {
     const container = document.getElementById('project-container');
     const title = document.getElementById('section-title');
     container.innerHTML = '';
 
-    if (title.innerText === 'Featured') {
+    if (currentSection === 'featured') {
       title.innerText = 'Seminar';
+      currentSection = 'seminar';
       for (let i = 1; i <= 9; i++) {
         container.innerHTML += `
           <div class="col-md-4">
             <div class="card project-card bg-dark text-white p-3 text-center">
               <h5 class="card-title">Seminar ${i}</h5>
-              <a href="#" class="btn btn-outline-light">Download</a>
+              <a href="#" class="btn btn-outline-light">View</a>
             </div>
           </div>`;
       }
     } else {
       title.innerText = 'Featured';
+      currentSection = 'featured';
       container.innerHTML = `
         <div class="col-md-6 project">
           <div class="card project-card bg-dark text-white">
