@@ -3,17 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Quentin Kleinert" />
     <meta
       name="description"
-      content="Quentin Kleinert, Computer Science Student at HTWK Leipzig. Passion for software development, Java, Flutter, and web technologies."
+      content="Quentin Kleinert – Computer Science Student at HTWK Leipzig. Passionate about Java, Flutter & Web Development. Explore my projects and let’s connect!"
+    />
+    <!-- Open Graph Meta-Tags (Facebook, LinkedIn, WhatsApp) -->
+    <meta
+      property="og:title"
+      content="Quentin Kleinert | Software Developer & Computer Science Student"
     />
     <meta
-      name="keywords"
-      content="Quentin Kleinert, Computer Science, Software Development, Java, Web Development, Flutter, HTWK Leipzig"
+      property="og:description"
+      content="Passionate about Java, Flutter & Web Development. Explore my projects & let's connect!"
     />
+    <meta
+      property="og:image"
+      content="https://yourwebsite.com/images/profile.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://yourwebsite.com" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Quentin Kleinert Portfolio" />
+
+    <!-- Twitter Card Meta-Tags (für Twitter/X) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Quentin Kleinert | Software Developer & CS Student"
+    />
+    <meta
+      name="twitter:description"
+      content="Specializing in Java, Flutter & Web Development. Explore my projects & connect with me!"
+    />
+    <meta
+      name="twitter:image"
+      content="https://yourwebsite.com/images/profile.jpg"
+    />
+    <meta name="twitter:site" content="@YourTwitterHandle" />
+    <meta name="twitter:creator" content="@YourTwitterHandle" />
+
     <title>
-      Quentin Kleinert | Computer Science Student & Software Developer
+      Quentin Kleinert | Software Developer & Computer Science Student at HTWK
+      Leipzig
     </title>
+
     <link rel="icon" href="images/logo.webp" type="image/x-icon" />
     <link href="css/normalize.css" rel="stylesheet" />
     <link
@@ -46,6 +82,7 @@
             width="30"
             height="24"
             id="navbar-logo"
+            loading="lazy"
           />
           Quentin Kleinert
         </a>
@@ -99,6 +136,7 @@
             src="images/IMG_20250125_0004.jpg"
             alt="Profilbild"
             class="profile-img shadow"
+            loading="lazy"
           />
         </div>
         <!-- Text -->
@@ -118,7 +156,7 @@
       </div>
     </header>
 
-    <div id="work" class="container py-5">
+    <section id="work" class="container py-5">
       <h1 class="text-center mb-5">
         <span id="section-title">Featured</span>
         <span class="text-muted">Projects</span>
@@ -134,9 +172,10 @@
                 src="images/ontoexplorer.png"
                 class="card-img-top project-img"
                 alt="ontoexplorer Project picture"
+                loading="lazy"
               />
               <div class="card-body">
-                <h5 class="card-title">DB route band generator</h5>
+                <h5 class="card-title">Ontoexplorer</h5>
                 <a href="DB-Project.html" class="btn btn-outline-light"
                   >See more</a
                 >
@@ -149,9 +188,10 @@
                 src="images/db.png"
                 class="card-img-top project-img"
                 alt="DB Project Picture"
+                loading="lazy"
               />
               <div class="card-body">
-                <h5 class="card-title">Ontoexplorer</h5>
+                <h5 class="card-title">DB route band generator</h5>
                 <a href="Ontoexplorer.html" class="btn btn-outline-light"
                   >See more</a
                 >
@@ -161,9 +201,9 @@
         </div>
         <button id="next-btn" class="nav-arrow">&#9654;</button>
       </div>
-    </div>
+    </section>
 
-    <div id="about" class="container py-5">
+    <main id="about" class="container py-5">
       <div class="row align-items-center g-4">
         <div class="col-lg-6 col-md-12">
           <p class="highlight">About</p>
@@ -196,17 +236,18 @@
             src="images/IMG_20250125_0004.jpg"
             alt="Profilbild"
             class="img-fluid profile-img"
+            loading="lazy"
           />
         </div>
       </div>
-    </div>
+    </main>
 
-    <div id="contact" class="container-fluid contact-section">
+    <section id="contact" class="container-fluid contact-section">
       <p>Interested in getting in contact with me? Send me a message at</p>
       <a href="mailto:quentinkleinert850@gmail.com" class="email-button"
         >quentinkleinert850@gmail.com</a
       >
-    </div>
+    </section>
 
     <footer class="footer">
       <div class="container">
@@ -223,21 +264,22 @@
         </div>
 
         <div class="logo">
-          <img src="images/logo.webp" alt="Logo" />
+          <img src="images/logo.webp" alt="Logo" loading="lazy" />
         </div>
 
         <div class="social-icons">
           <a
             href="https://de.linkedin.com/?src=go-pa&trk=sem-ga_campid.17342682713_asid.148803897556_crid.730830873565_kw.linkedin_d.c_tid.kwd-148086543_n.g_mt.e_geo.9043023&mcid=6935667189886640128&cid=&gad_source=1&gclid=CjwKCAiAzba9BhBhEiwA7glbasRDnFFAj8ASJITCZwviLnsVJCOac3xcfDkHSIOnXy4YEoWxL-6FQRoCG9gQAvD_BwE&gclsrc=aw.ds"
-            ><img src="images/twitter.png" alt="Twitter"
+            ><img src="images/twitter.png" alt="Twitter" loading="lazy"
           /></a>
           <a
             href="https://de.linkedin.com/?src=go-pa&trk=sem-ga_campid.17342682713_asid.148803897556_crid.730830873565_kw.linkedin_d.c_tid.kwd-148086543_n.g_mt.e_geo.9043023&mcid=6935667189886640128&cid=&gad_source=1&gclid=CjwKCAiAzba9BhBhEiwA7glbasRDnFFAj8ASJITCZwviLnsVJCOac3xcfDkHSIOnXy4YEoWxL-6FQRoCG9gQAvD_BwE&gclsrc=aw.ds"
-            ><img src="images/linkedin.png" alt="LinkedIn"
+            ><img src="images/linkedin.png" alt="LinkedIn" loading="lazy"
           /></a>
           <a href="https://www.instagram.com/"
-            ><img src="images/instagram.png" alt="Instagram"
-          /></a>
+            ><img src="images/instagram.png" alt="Instagram loading="lazy""
+            /></a
+          >
         </div>
 
         <p>All rights reserved. &copy; Copyright Quentin Kleinert 2025</p>
@@ -249,5 +291,24 @@
       crossorigin="anonymous"
     ></script>
     <script src="index.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Quentin Kleinert",
+        "url": "https://yourwebsite.com",
+        "image": "https://yourwebsite.com/images/profile.jpg",
+        "jobTitle": "Software Developer & Computer Science Student",
+        "worksFor": {
+          "@type": "EducationalOrganization",
+          "name": "HTWK Leipzig"
+        },
+        "sameAs": [
+          "https://github.com/QuentinKleinert",
+          "https://www.linkedin.com/in/quentinkleinert",
+          "https://twitter.com/YourTwitterHandle"
+        ]
+      }
+    </script>
   </body>
 </html>
