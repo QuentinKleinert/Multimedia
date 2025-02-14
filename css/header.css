@@ -1,15 +1,17 @@
 .intro-section {
-    height: 80vh;
+    min-height: 85vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .profile-img {
     border-radius: 20px;
-    /* Abgerundete Ecken */
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
+    display: block;
+    margin: auto;
 }
 
 .contact-btn {
